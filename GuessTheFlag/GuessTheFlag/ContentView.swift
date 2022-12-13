@@ -7,6 +7,40 @@
 
 import SwiftUI
 
+struct FlagView: View {
+    var nameOfCountry: String
+    var didTap: () -> Void
+
+    init(name: String, didTap: @escaping () -> Void) {
+        self.nameOfCountry = name
+        self.didTap = didTap
+    }
+
+    var body: some View {
+        return Button {
+            didTap()
+        } label: {
+            Image(nameOfCountry)
+                .renderingMode(.original)
+                .flagModifier()
+        }
+    }
+}
+
+struct FlagImageModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        return content
+            .clipShape(Capsule())
+            .shadow(radius: 5)
+    }
+}
+
+extension Image {
+    func flagModifier() -> some View {
+        return modifier(FlagImageModifier())
+    }
+}
+
 struct ContentView: View {
 
     @State
@@ -48,13 +82,8 @@ struct ContentView: View {
                     }
 
                     ForEach(0..<3) { number in
-                        Button {
+                        FlagView(name: countries[number]) {
                             flagTapped(number)
-                        } label: {
-                            Image(countries[number])
-                                .renderingMode(.original)
-                                .clipShape(Capsule())
-                                .shadow(radius: 5)
                         }
                     }
                 }
