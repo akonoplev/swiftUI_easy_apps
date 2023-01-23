@@ -16,6 +16,9 @@
 		9AC6C491297617EB009266F2 /* TouchIdAndFaceId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC6C490297617EB009266F2 /* TouchIdAndFaceId.swift */; };
 		9AC6C49429761E21009266F2 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC6C49329761E21009266F2 /* Location.swift */; };
 		9AC6C49629761F4E009266F2 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC6C49529761F4E009266F2 /* EditView.swift */; };
+		F6F57AAF297A3E8000D05BA9 /* WikipediaResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F57AAE297A3E8000D05BA9 /* WikipediaResponse.swift */; };
+		F6F57AB1297A417800D05BA9 /* ContentView.ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F57AB0297A417800D05BA9 /* ContentView.ViewModel.swift */; };
+		F6F57AB3297A45B400D05BA9 /* FIleManager+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F57AB2297A45B400D05BA9 /* FIleManager+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		9AC6C490297617EB009266F2 /* TouchIdAndFaceId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchIdAndFaceId.swift; sourceTree = "<group>"; };
 		9AC6C49329761E21009266F2 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		9AC6C49529761F4E009266F2 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		F6F57AAE297A3E8000D05BA9 /* WikipediaResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaResponse.swift; sourceTree = "<group>"; };
+		F6F57AB0297A417800D05BA9 /* ContentView.ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.ViewModel.swift; sourceTree = "<group>"; };
+		F6F57AB2297A45B400D05BA9 /* FIleManager+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FIleManager+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,12 +72,14 @@
 				9A05D2D72974DC0E003A4F73 /* Info.plist */,
 				9A05D2C52973B165003A4F73 /* BucketListApp.swift */,
 				9A05D2C72973B165003A4F73 /* ContentView.swift */,
+				F6F57AB0297A417800D05BA9 /* ContentView.ViewModel.swift */,
 				9AC6C49529761F4E009266F2 /* EditView.swift */,
 				9A05D2C92973B167003A4F73 /* Assets.xcassets */,
 				9A05D2CB2973B167003A4F73 /* Preview Content */,
 				9A05D2D32974CF5C003A4F73 /* SwitchView.swift */,
 				9A05D2D52974D9B1003A4F73 /* MapView.swift */,
 				9AC6C490297617EB009266F2 /* TouchIdAndFaceId.swift */,
+				F6F57AB2297A45B400D05BA9 /* FIleManager+extension.swift */,
 			);
 			path = BucketList;
 			sourceTree = "<group>";
@@ -87,9 +95,18 @@
 		9AC6C49229761E12009266F2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F6F57AAD297A3E6900D05BA9 /* WikipediaModels */,
 				9AC6C49329761E21009266F2 /* Location.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		F6F57AAD297A3E6900D05BA9 /* WikipediaModels */ = {
+			isa = PBXGroup;
+			children = (
+				F6F57AAE297A3E8000D05BA9 /* WikipediaResponse.swift */,
+			);
+			path = WikipediaModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6F57AAF297A3E8000D05BA9 /* WikipediaResponse.swift in Sources */,
 				9AC6C491297617EB009266F2 /* TouchIdAndFaceId.swift in Sources */,
 				9A05D2C82973B165003A4F73 /* ContentView.swift in Sources */,
 				9A05D2D62974D9B1003A4F73 /* MapView.swift in Sources */,
@@ -169,6 +187,8 @@
 				9AC6C49629761F4E009266F2 /* EditView.swift in Sources */,
 				9AC6C49429761E21009266F2 /* Location.swift in Sources */,
 				9A05D2D42974CF5C003A4F73 /* SwitchView.swift in Sources */,
+				F6F57AB3297A45B400D05BA9 /* FIleManager+extension.swift in Sources */,
+				F6F57AB1297A417800D05BA9 /* ContentView.ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +317,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BucketList/Preview Content\"";
-				DEVELOPMENT_TEAM = YPFNCC4WXQ;
+				DEVELOPMENT_TEAM = 37K3328HH4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BucketList/Info.plist;
@@ -313,7 +333,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = akonoplev.com.BucketList;
+				PRODUCT_BUNDLE_IDENTIFIER = akonoplev.com.BucketList1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
